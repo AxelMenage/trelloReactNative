@@ -15,6 +15,7 @@ export default class Tasks extends React.Component {
             user: [],
             loading: true
         }
+        this.addTaskSubmit = this.addTaskSubmit.bind(this);
     }
     static navigationOptions = { title: 'Tasks', header: null };
 
@@ -87,6 +88,10 @@ export default class Tasks extends React.Component {
         return response;
     }
 
+    addTaskSubmit(data){
+        console.log(data);
+    }
+
     render() {
 
         let cards = this.state.listsCards.map((item => {
@@ -131,14 +136,14 @@ export default class Tasks extends React.Component {
                         }}>
                         <View style={{marginTop: 22}}>
                             <View>
-                                <Form>
+                                <Form onSubmit={this.addTaskSubmit()}>
                                     <Item floatingLabel>
                                         <Label>Name</Label>
-                                        <Input onChangeText={(name) => this.props.changeTaskName(name)}/>
+                                        <Input/>
                                     </Item>
                                     <Item floatingLabel>
                                         <Label>Description</Label>
-                                        <Input onChangeText={(desc) => this.props.changeTaskDesc(desc)}/>
+                                        <Input/>
                                     </Item>
                                     <Picker
                                         mode="dropdown"

@@ -12,9 +12,6 @@ const HomeScreenRouter = DrawerNavigator(
     },
     {
         contentComponent: props => <SideBar {...props} />
-    },
-    {
-        header: null
     }
 );
 export default HomeScreenRouter;

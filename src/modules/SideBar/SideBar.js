@@ -2,7 +2,6 @@ import React from "react";
 import {AppRegistry, Image, StatusBar, ImageBackground, Alert, AsyncStorage} from "react-native";
 import { Container, Content, Text, List, ListItem, Button } from "native-base";
 
-import styles from "../home/scenes/Home/styles";
 const routes = ["Boards", "Profile", "Parameters"];
 
 export default class SideBar extends React.Component {
